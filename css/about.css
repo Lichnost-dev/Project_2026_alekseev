@@ -1,0 +1,246 @@
+/* Дополнительные стили для страницы "О нас" */
+
+/* Заголовок страницы */
+.page-header {
+    background: linear-gradient(135deg, #0f1a2c 0%, #1e2b3a 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* История */
+.history {
+    padding: 80px 0;
+    background: white;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.history-text {
+    flex: 1 1 500px;
+}
+
+.history-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #0f1a2c;
+}
+
+.history-text p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d32f2f;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #5f6c80;
+}
+
+.history-image {
+    flex: 1 1 300px;
+    text-align: center;
+    background: #f0f4f9;
+    border-radius: 40px;
+    padding: 60px;
+}
+
+.history-image i {
+    font-size: 10rem;
+    color: #d32f2f;
+    opacity: 0.8;
+}
+
+/* Команда */
+.team {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    background: #ffebee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.team-photo i {
+    font-size: 4rem;
+    color: #d32f2f;
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #0f1a2c;
+}
+
+.team-position {
+    color: #d32f2f;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-desc {
+    color: #5f6c80;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Оборудование */
+.equipment {
+    padding: 80px 0;
+    background: white;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.equipment-card {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #eef2f6;
+}
+
+.equipment-card i {
+    font-size: 3rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.equipment-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #0f1a2c;
+}
+
+.equipment-card p {
+    color: #5f6c80;
+}
+
+/* Сертификаты */
+.certificates {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+}
+
+.certificate-card i {
+    font-size: 3rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.certificate-card p {
+    font-weight: 600;
+    color: #0f1a2c;
+}
+
+/* Адаптивность */
+@media (max-width: 800px) {
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .history-content {
+        flex-direction: column;
+    }
+    
+    .stats {
+        justify-content: center;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .history-image i {
+        font-size: 6rem;
+    }
+}

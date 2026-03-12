@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТО Мастеръ - Услуги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <span>СТО repair</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="services.html" class="active">Услуги</a>
+                <a href="contacts.html">Контакты</a>
+              
+                <button class="btn-login" id="openLoginBtn"><i class="fas fa-sign-in-alt"></i> Войти</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Модальные окна -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeLoginModal">&times;</span>
+            <h2>Вход</h2>
+            <p>Введите телефон или почту</p>
+            <div class="input-group"><input type="text" placeholder="Телефон / e-mail"></div>
+            <div class="input-group"><input type="password" placeholder="Пароль"></div>
+            <button class="modal-btn" id="fakeLoginBtn">Войти</button>
+            <div class="modal-footer">
+                Нет аккаунта? <span id="goToRegister">Зарегистрироваться</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeRegisterModal">&times;</span>
+            <h2>Регистрация</h2>
+            <p>Станьте клиентом и получайте скидки</p>
+            <div class="input-group"><input type="text" placeholder="Имя"></div>
+            <div class="input-group"><input type="text" placeholder="Телефон"></div>
+            <div class="input-group"><input type="email" placeholder="E-mail (необязательно)"></div>
+            <div class="input-group"><input type="password" placeholder="Пароль"></div>
+            <button class="modal-btn" id="fakeRegisterBtn">Зарегистрироваться</button>
+            <div class="modal-footer">
+                Уже есть аккаунт? <span id="goToLogin">Войти</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Наши услуги</h1>
+                <p>Полный спектр работ по ремонту и обслуживанию</p>
+            </div>
+        </section>
+
+        <!-- Категории услуг -->
+        <section class="service-categories">
+            <div class="container">
+                <!-- Диагностика -->
+                <div class="service-category">
+                    <h2><i class="fas fa-stethoscope"></i> Диагностика</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Компьютерная диагностика</h3>
+                                <p>Проверка всех электронных систем автомобиля</p>
+                            </div>
+                            <div class="service-price">1 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Диагностика двигателя</h3>
+                                <p>Замер компрессии, проверка давления масла</p>
+                            </div>
+                            <div class="service-price">2 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Диагностика ходовой части</h3>
+                                <p>Проверка подвески на стенде</p>
+                            </div>
+                            <div class="service-price">1 200 ₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ремонт двигателя -->
+                <div class="service-category">
+                    <h2><i class="fas fa-engine"></i> Ремонт двигателя</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена масла в двигателе</h3>
+                                <p>Масло и фильтр в подарок</p>
+                            </div>
+                            <div class="service-price">от 1 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена ремня ГРМ</h3>
+                                <p>С заменой роликов</p>
+                            </div>
+                            <div class="service-price">от 5 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена прокладки ГБЦ</h3>
+                                <p>Сложный ремонт с гарантией</p>
+                            </div>
+                            <div class="service-price">от 12 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Капитальный ремонт</h3>
+                                <p>Полное восстановление двигателя</p>
+                            </div>
+                            <div class="service-price">от 50 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Трансмиссия -->
+                <div class="service-category">
+                    <h2><i class="fas fa-cogs"></i> Трансмиссия</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена масла в АКПП</h3>
+                                <p>Аппаратная замена</p>
+                            </div>
+                            <div class="service-price">3 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена масла в МКПП</h3>
+                                <p>С промывкой</p>
+                            </div>
+                            <div class="service-price">1 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Ремонт АКПП</h3>
+                                <p>Диагностика бесплатно</p>
+                            </div>
+                            <div class="service-price">от 15 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена сцепления</h3>
+                                <p>С комплектующими</p>
+                            </div>
+                            <div class="service-price">от 8 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ходовая часть -->
+                <div class="service-category">
+                    <h2><i class="fas fa-car-crash"></i> Ходовая часть</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена амортизаторов</h3>
+                                <p>Передние/задние</p>
+                            </div>
+                            <div class="service-price">от 3 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена шаровых опор</h3>
+                                <p>Сход-развал в подарок</p>
+                            </div>
+                            <div class="service-price">от 2 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена сайлентблоков</h3>
+                                <p>Прессовые работы</p>
+                            </div>
+                            <div class="service-price">от 2 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Развал-схождение</h3>
+                                <p>3D регулировка</p>
+                            </div>
+                            <div class="service-price">2 500 ₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Тормозная система -->
+                <div class="service-category">
+                    <h2><i class="fas fa-brake-warning"></i> Тормозная система</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена тормозных колодок</h3>
+                                <p>Передние/задние</p>
+                            </div>
+                            <div class="service-price">от 1 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена тормозных дисков</h3>
+                                <p>С заменой колодок</p>
+                            </div>
+                            <div class="service-price">от 3 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена тормозной жидкости</h3>
+                                <p>Прокачка системы</p>
+                            </div>
+                            <div class="service-price">1 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Ремонт суппортов</h3>
+                                <p>Восстановление</p>
+                            </div>
+                            <div class="service-price">от 2 500 ₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Электрика -->
+                <div class="service-category">
+                    <h2><i class="fas fa-car-battery"></i> Электрика</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Диагностика электрооборудования</h3>
+                                <p>Поиск неисправностей</p>
+                            </div>
+                            <div class="service-price">1 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена генератора</h3>
+                                <p>С диагностикой</p>
+                            </div>
+                            <div class="service-price">от 3 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена стартера</h3>
+                                <p>С проверкой</p>
+                            </div>
+                            <div class="service-price">от 3 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Ремонт проводки</h3>
+                                <p>Любая сложность</p>
+                            </div>
+                            <div class="service-price">от 1 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кондиционер -->
+                <div class="service-category">
+                    <h2><i class="fas fa-fan"></i> Кондиционер</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Заправка кондиционера</h3>
+                                <p>С контролем веса</p>
+                            </div>
+                            <div class="service-price">2 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Диагностика утечек</h3>
+                                <p>Поиск мест утечки фреона</p>
+                            </div>
+                            <div class="service-price">1 500 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Чистка системы</h3>
+                                <p>Антибактериальная обработка</p>
+                            </div>
+                            <div class="service-price">2 000 ₽</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3>Замена фильтра салона</h3>
+                                <p>Угольный/обычный</p>
+                            </div>
+                            <div class="service-price">500 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Акции -->
+        <section class="promo">
+            <div class="container">
+                <h2 class="section-title">Специальные предложения</h2>
+                <div class="promo-grid">
+                    <div class="promo-card">
+                        <div class="promo-badge">-15%</div>
+                        <h3>Комплексная диагностика</h3>
+                        <p>При записи на ремонт - скидка на диагностику</p>
+                        <a href="contacts.html" class="btn btn-outline">Записаться</a>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-badge">Подарок</div>
+                        <h3>Замена масла</h3>
+                        <p>Масло в подарок при замене</p>
+                        <a href="contacts.html" class="btn btn-outline">Записаться</a>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-badge">-20%</div>
+                        <h3>Ремонт кондиционера</h3>
+                        <p>Скидка на ремонт при заправке</p>
+                        <a href="contacts.html" class="btn btn-outline">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-tools"></i>
+                    <span>СТО repair</span>
+                </div>
+                <div class="footer-info">
+                    <p>© 2025 Все права защищены</p>
+                    <p>Москва, ул. Автомобильная 15</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

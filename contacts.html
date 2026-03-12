@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТО Мастеръ - Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <span>СТО repair</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="services.html">Услуги</a>
+                <a href="contacts.html" class="active">Контакты</a>
+             
+                <button class="btn-login" id="openLoginBtn"><i class="fas fa-sign-in-alt"></i> Войти</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Модальные окна -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeLoginModal">&times;</span>
+            <h2>Вход</h2>
+            <p>Введите телефон или почту</p>
+            <div class="input-group"><input type="text" placeholder="Телефон / e-mail"></div>
+            <div class="input-group"><input type="password" placeholder="Пароль"></div>
+            <button class="modal-btn" id="fakeLoginBtn">Войти</button>
+            <div class="modal-footer">
+                Нет аккаунта? <span id="goToRegister">Зарегистрироваться</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeRegisterModal">&times;</span>
+            <h2>Регистрация</h2>
+            <p>Станьте клиентом и получайте скидки</p>
+            <div class="input-group"><input type="text" placeholder="Имя"></div>
+            <div class="input-group"><input type="text" placeholder="Телефон"></div>
+            <div class="input-group"><input type="email" placeholder="E-mail (необязательно)"></div>
+            <div class="input-group"><input type="password" placeholder="Пароль"></div>
+            <button class="modal-btn" id="fakeRegisterBtn">Зарегистрироваться</button>
+            <div class="modal-footer">
+                Уже есть аккаунт? <span id="goToLogin">Войти</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами любым удобным способом</p>
+            </div>
+        </section>
+
+        <!-- Контактная информация -->
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Адрес</h3>
+                        <p>г. Москва, ул. Автомобильная, д. 15</p>
+                        <p>м. Автозаводская, выход №3</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Телефон</h3>
+                        <p>+7 (495) 777-88-99</p>
+                        <p>+7 (925) 123-45-67</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>info@sto-master.ru</p>
+                        <p>zapis@sto-master.ru</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Режим работы</h3>
+                        <p>Пн-Пт: 9:00 - 21:00</p>
+                        <p>Сб: 10:00 - 20:00</p>
+                        <p>Вс: выходной</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карта и форма обратной связи -->
+        <section class="map-section">
+            <div class="container">
+                <div class="map-form-grid">
+                    <!-- Карта -->
+                    <div class="map-container">
+                        <h2>Как нас найти</h2>
+                        <div class="map">
+                            <!-- Здесь будет iframe с картой (например Яндекс.Карты) -->
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f&source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                        </div>
+                        <div class="map-address">
+                            <p><i class="fas fa-car"></i> Бесплатная парковка для клиентов</p>
+                            <p><i class="fas fa-bus"></i> Остановка "Автомобильная улица" в 50 метрах</p>
+                        </div>
+                    </div>
+
+                    <!-- Форма обратной связи -->
+                    <div class="feedback-form">
+                        <h2>Напишите нам</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Телефон" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <select>
+                                    <option>Тема обращения</option>
+                                    <option>Запись на ремонт</option>
+                                    <option>Вопрос по услугам</option>
+                                    <option>Сотрудничество</option>
+                                    <option>Другое</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="5" placeholder="Ваше сообщение"></textarea>
+                            </div>
+                            <button type="submit" class="btn form-btn">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Социальные сети -->
+        <section class="social-section">
+            <div class="container">
+                <h2 class="section-title">Мы в социальных сетях</h2>
+                <div class="social-grid">
+                    <a href="#" class="social-card whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" class="social-card telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="#" class="social-card instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-card vk">
+                        <i class="fab fa-vk"></i>
+                        <span>VKontakte</span>
+                    </a>
+                    <a href="#" class="social-card youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="#" class="social-card tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Часто задаваемые вопросы -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Как записаться на ремонт?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Вы можете записаться по телефону, через форму на сайте или в нашем Telegram боте.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Сколько времени занимает диагностика?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Компьютерная диагностика занимает около 30-40 минут, полная диагностика автомобиля - 1-2 часа.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Даете ли вы гарантию?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, на все виды работ мы даем гарантию до 2 лет, на запчасти - гарантия производителя.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Можно ли присутствовать при ремонте?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, у нас есть зона для клиентов с прозрачной стеной, вы можете наблюдать за процессом ремонта.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-tools"></i>
+                    <span>СТО repair</span>
+                </div>
+                <div class="footer-info">
+                    <p>© 2025 Все права защищены</p>
+                    <p>Москва, ул. Автомобильная 15</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/contacts.js"></script>
+</body>
+</html>

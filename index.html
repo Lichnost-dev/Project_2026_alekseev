@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТО Мастеръ - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка (одинаковая для всех страниц) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <span>СТО repair</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="services.html">Услуги</a>
+                <a href="contacts.html">Контакты</a>
+               
+                <button class="btn-login" id="openLoginBtn"><i class="fas fa-sign-in-alt"></i> Войти</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Модальные окна (будут подключены через отдельный файл) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeLoginModal">&times;</span>
+            <h2>Вход</h2>
+            <p>Введите телефон или почту</p>
+            <div class="input-group"><input type="text" placeholder="Телефон / e-mail"></div>
+            <div class="input-group"><input type="password" placeholder="Пароль"></div>
+            <button class="modal-btn" id="fakeLoginBtn">Войти</button>
+            <div class="modal-footer">
+                Нет аккаунта? <span id="goToRegister">Зарегистрироваться</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeRegisterModal">&times;</span>
+            <h2>Регистрация</h2>
+            <p>Станьте клиентом и получайте скидки</p>
+            <div class="input-group"><input type="text" placeholder="Имя"></div>
+            <div class="input-group"><input type="text" placeholder="Телефон"></div>
+            <div class="input-group"><input type="email" placeholder="E-mail (необязательно)"></div>
+            <div class="input-group"><input type="password" placeholder="Пароль"></div>
+            <button class="modal-btn" id="fakeRegisterBtn">Зарегистрироваться</button>
+            <div class="modal-footer">
+                Уже есть аккаунт? <span id="goToLogin">Войти</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент главной страницы -->
+    <main>
+        <!-- Hero секция -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge"><i class="fas fa-wrench"></i> Профессиональный ремонт</span>
+                    <h1>Диагностика, ремонт и полное обслуживание авто</h1>
+                    <p>Современное оборудование, опытные мастера и гарантия на все виды работ. Ваш автомобиль в надёжных руках.</p>
+                    <div class="hero-buttons">
+                        <a href="services.html" class="btn">Наши услуги</a>
+                        <a href="contacts.html" class="btn btn-outline">Связаться с нами</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-car-side"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преймущества -->
+        <section class="advantages">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Быстро</h3>
+                        <p>Среднее время ремонта - 2 часа</p>
+                    </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Гарантия 2 года</h3>
+                        <p>На все виды работ</p>
+                    </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-ruble-sign"></i>
+                        <h3>Честные цены</h3>
+                        <p>Смета без скрытых платежей</p>
+                    </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Опытные мастера</h3>
+                        <p>Средний стаж от 7 лет</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные услуги (превью) -->
+        <section class="popular-services">
+            <div class="container">
+                <h2 class="section-title">Популярные услуги</h2>
+                <div class="services-preview">
+                    <div class="service-preview-card">
+                        <i class="fas fa-oil-can"></i>
+                        <h3>Замена масла</h3>
+                        <p>от 1500 ₽</p>
+                        <a href="services.html" class="btn-link">Подробнее →</a>
+                    </div>
+                    <div class="service-preview-card">
+                        <i class="fas fa-car-battery"></i>
+                        <h3>Диагностика</h3>
+                        <p>от 1000 ₽</p>
+                        <a href="services.html" class="btn-link">Подробнее →</a>
+                    </div>
+                    <div class="service-preview-card">
+                        <i class="fas fa-fan"></i>
+                        <h3>Кондиционер</h3>
+                        <p>от 2500 ₽</p>
+                        <a href="services.html" class="btn-link">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Отзывы наших клиентов</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div>
+                                <h4>Александр Петров</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>Отличный сервис! Быстро нашли проблему с двигателем, сделали всё качественно. Буду рекомендовать друзьям.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div>
+                                <h4>Дмитрий Иванов</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>Заправляю кондиционер только здесь. Вежливый персонал, адекватные цены и гарантия на работу.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div>
+                                <h4>Михаил Сидоров</h4>
+                                <div class="rating">★★★★☆</div>
+                            </div>
+                        </div>
+                        <p>Делал замену масла и фильтров. Всё чётко, быстро, дали скидку на следующее обслуживание.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-tools"></i>
+                    <span>СТО repair</span>
+                </div>
+                <div class="footer-info">
+                    <p>© 2025 Все права защищены</p>
+                    <p>Москва, ул. Автомобильная 15</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
